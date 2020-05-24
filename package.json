@@ -25,5 +25,11 @@
     "eslint-plugin-react-hooks": "2.5.0",
     "husky": "^4.2.5",
     "typescript": "^3.9.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "eslint --fix",
+      "pre-push": "eslint --fix"
+    }
   }
 }
