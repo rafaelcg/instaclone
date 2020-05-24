@@ -1,7 +1,9 @@
 import * as React from 'react';
 
 export const Header = () => (
-  <p>Header</p>
+  <div data-testid="header-component">
+    Header
+  </div>
 );
 
 export default Header;

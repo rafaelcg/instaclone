@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "eslint": "eslint --ext .js,.jsx,.ts,.tsx ./"
+    "eslint": "eslint --ext .js,.jsx,.ts,.tsx ./",
+    "test": "jest"
   },
   "dependencies": {
     "next": "9.4.2",
@@ -14,6 +15,11 @@
     "react-dom": "16.13.1"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-typescript": "^7.9.0",
+    "@testing-library/jest-dom": "^5.8.0",
+    "@testing-library/react": "^10.0.4",
+    "@types/jest": "^25.2.3",
     "@types/node": "^14.0.5",
     "@types/react": "^16.9.35",
     "@typescript-eslint/eslint-plugin": "2.24.0",
@@ -24,12 +30,14 @@
     "eslint-plugin-react": "7.19.0",
     "eslint-plugin-react-hooks": "2.5.0",
     "husky": "^4.2.5",
+    "jest": "^26.0.1",
+    "ts-jest": "^26.0.0",
     "typescript": "^3.9.3"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn eslint --fix",
-      "pre-push": "yarn eslint --fix"
+      "pre-commit": "yarn test",
+      "pre-push": "yarn test"
     }
   }
 }
